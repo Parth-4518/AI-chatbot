@@ -184,3 +184,10 @@ To propose changes:
 *Document Version: 1.0*  
 *Last Updated: 2026-06-11*  
 *Owner: CEO Agent (TechnologySavy)*
+
+---
+
+## Related Issues
+
+- Resolves [#1](https://github.com/Parth-4518/AI-chatbot/issues/1) — Improve README and add comprehensive AI roadmap
+- Resolves [#2](https://github.com/Parth-4518/AI-chatbot/issues/2) — Create roadmap.md file
