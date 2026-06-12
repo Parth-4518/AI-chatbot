@@ -373,3 +373,10 @@ Contributions are welcome. Please open an issue or pull request on GitHub.
 ## License
 
 [MIT](LICENSE)
+
+---
+
+## Related Issues
+
+- Resolves [#1](https://github.com/Parth-4518/AI-chatbot/issues/1) — Improve README and add comprehensive AI roadmap
+- Resolves [#2](https://github.com/Parth-4518/AI-chatbot/issues/2) — Create roadmap.md file
