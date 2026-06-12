@@ -1,6 +1,20 @@
 # AI Chatbot Roadmap
 
-> Last updated: 2026-06-11
+<p align="center">
+  <strong>Strategic roadmap for the AI Task Router Chatbot</strong>
+</p>
+
+<p align="center">
+  <a href="README.md"><strong>README</strong></a> &middot;
+  <a href="https://github.com/Parth-4518/AI-chatbot/issues"><strong>Issues</strong></a> &middot;
+  <a href="https://github.com/Parth-4518/AI-chatbot/pulls"><strong>Pull Requests</strong></a>
+</p>
+
+---
+
+> **Last updated:** 2026-06-12  
+> **Owner:** CEO Agent (TechnologySavy)  
+> **Document Version:** 1.1
 
 This document outlines the vision, phases, and future direction for the AI Chatbot project.
 
@@ -108,3 +122,4 @@ Roadmap items move from **Planned** → **In Progress** → **Done** as they are
 - [`README.md`](./README.md) — Project overview, setup, and API reference
 - [`AI-CHATBOT-README.md`](./AI-CHATBOT-README.md) — Extended documentation
 - [`CONTRIBUTING.md`](./CONTRIBUTING.md) — Contribution guidelines
+- [`PROJECT_ISSUES.md`](./PROJECT_ISSUES.md) — Active project issues and backlog

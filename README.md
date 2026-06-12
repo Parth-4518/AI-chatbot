@@ -5,12 +5,21 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/Parth-4518/AI-chatbot/issues"><img src="https://img.shields.io/github/issues/Parth-4518/AI-chatbot" alt="Issues"></a>
+  <a href="https://github.com/Parth-4518/AI-chatbot/pulls"><img src="https://img.shields.io/github/issues-pr/Parth-4518/AI-chatbot" alt="Pull Requests"></a>
+  <img src="https://img.shields.io/badge/node-%3E%3D18-brightgreen" alt="Node >= 18">
+  <img src="https://img.shields.io/badge/pnpm-%3E%3D8-blue" alt="pnpm >= 8">
+  <a href="ROADMAP.md"><img src="https://img.shields.io/badge/roadmap-5%20phases-orange" alt="Roadmap"></a>
+</p>
+
+<p align="center">
   <a href="#features"><strong>Features</strong></a> &middot;
   <a href="#installation"><strong>Installation</strong></a> &middot;
   <a href="#usage"><strong>Usage</strong></a> &middot;
   <a href="#api-reference"><strong>API Reference</strong></a> &middot;
   <a href="#project-structure"><strong>Project Structure</strong></a> &middot;
-  <a href="ROADMAP.md"><strong>Roadmap</strong></a>
+  <a href="#ai-roadmap"><strong>AI Roadmap</strong></a> &middot;
+  <a href="ROADMAP.md"><strong>Full Roadmap</strong></a>
 </p>
 
 ---
@@ -297,19 +306,57 @@ pnpm start
 
 ---
 
-## Roadmap
+## AI Roadmap
 
-The project follows a 5-phase strategic plan:
+The project follows a **5-phase strategic AI roadmap** designed to evolve from a reliable task router into a fully autonomous AI workforce platform:
 
-| Phase | Focus | Timeline |
-|-------|-------|----------|
-| **1. Foundation** | Core routing, agent matching, basic UI | Current — Stable |
-| **2. Intelligence** | Context-aware conversations, LLM classification, analytics | Q3 2026 |
-| **3. Integrations** | Slack, Discord, voice, webhooks | Q4 2026 |
-| **4. Enterprise** | RBAC, SSO, audit logs, on-premise | Q1 2027 |
-| **5. Autonomy** | Self-improving agents, proactive suggestions | Q2 2027 |
+### Phase Overview
 
-See the full [ROADMAP.md](ROADMAP.md) for detailed milestones, deliverables, and short-term priorities.
+| Phase | Focus | Status | Timeline |
+|-------|-------|--------|----------|
+| **1. Foundation** | Core routing, agent matching, basic UI | ✅ Stable | Current |
+| **2. Intelligence** | LLM classification, context-aware conversations, analytics | 🚧 In Progress | Q3 2026 |
+| **3. Integrations** | Slack, Discord, Teams, email, webhooks | 📋 Planned | Q4 2026 |
+| **4. Enterprise** | RBAC, SSO, audit logs, on-premise | 📋 Planned | Q1 2027 |
+| **5. Autonomy** | Self-improving routing, predictive issues, auto-resolution | 📋 Planned | Q2 2027 |
+
+### Key Deliverables by Phase
+
+**Phase 1 — Foundation (Complete)**
+- Natural language task routing with intent classification
+- Agent matching by skills, workload, and historical success
+- Standalone chat UI with real-time status polling
+- Embedded widget for dashboards
+- REST API for programmatic access
+- Quick action buttons and work product display
+
+**Phase 2 — Intelligence (In Progress)**
+- LLM-based intent classification replacing rule-based matching
+- Context-aware multi-turn conversations with session memory
+- Learning from past routing decisions with feedback loops
+- Confidence scoring with automatic fallback re-routing
+- Semantic search over past issues for better matching
+- Agent performance analytics dashboard
+
+**Phase 3 — Integrations (Planned)**
+- Slack, Discord, and Microsoft Teams bots
+- Email-to-task trigger and webhook bidirectional sync
+- Mobile PWA companion and voice input support
+
+**Phase 4 — Enterprise (Planned)**
+- Role-based access control (RBAC) and audit logs
+- Custom agent onboarding wizard (no-code)
+- SSO/SAML authentication and on-premise deployment
+- Multi-company support from a single instance
+
+**Phase 5 — Autonomy (Planned)**
+- Self-improving routing models with online learning
+- Predictive issue creation from project patterns
+- Automated weekly/monthly reporting
+- Anomaly detection for stuck tasks and misrouted issues
+- Auto-resolution for common repetitive requests
+
+See the full [ROADMAP.md](ROADMAP.md) for detailed milestones, success metrics, dependencies, and contribution guidelines.
 
 ---
 
