@@ -9,7 +9,8 @@
   <a href="#installation"><strong>Installation</strong></a> &middot;
   <a href="#usage"><strong>Usage</strong></a> &middot;
   <a href="#api-reference"><strong>API Reference</strong></a> &middot;
-  <a href="#project-structure"><strong>Project Structure</strong></a>
+  <a href="#project-structure"><strong>Project Structure</strong></a> &middot;
+  <a href="ROADMAP.md"><strong>Roadmap</strong></a>
 </p>
 
 ---
@@ -298,11 +299,17 @@ pnpm start
 
 ## Roadmap
 
-- [ ] Multi-turn conversation context
-- [ ] LLM-based intent classification
-- [ ] Voice and Slack integrations
-- [ ] Agent performance analytics
-- [ ] Mobile app companion
+The project follows a 5-phase strategic plan:
+
+| Phase | Focus | Timeline |
+|-------|-------|----------|
+| **1. Foundation** | Core routing, agent matching, basic UI | Current — Stable |
+| **2. Intelligence** | Context-aware conversations, LLM classification, analytics | Q3 2026 |
+| **3. Integrations** | Slack, Discord, voice, webhooks | Q4 2026 |
+| **4. Enterprise** | RBAC, SSO, audit logs, on-premise | Q1 2027 |
+| **5. Autonomy** | Self-improving agents, proactive suggestions | Q2 2027 |
+
+See the full [ROADMAP.md](ROADMAP.md) for detailed milestones, deliverables, and short-term priorities.
 
 ---
 
