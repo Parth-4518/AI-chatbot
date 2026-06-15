@@ -1,97 +1,215 @@
-# Roadmap
+# AI Task Router Roadmap
 
-This document expands the roadmap preview in `README.md`.
+This document outlines the strategic roadmap for the AI Task Router Chatbot project. The roadmap is directional and priorities may shift based on user feedback and operational learnings.
 
-Paperclip is still moving quickly. The list below is directional, not promised, and priorities may shift as we learn from users and from operating real AI companies with the product.
+---
 
-We value community involvement and want to make sure contributor energy goes toward areas where it can land.
+## Phase 1: Foundation (Current)
 
-We may accept contributions in the areas below, but if you want to work on roadmap-level core features, please coordinate with us first in Discord (`#dev`) before writing code. Bugs, docs, polish, and tightly scoped improvements are still the easiest contributions to merge.
+**Goal**: Build a reliable task routing system with basic intent classification and agent matching.
 
-If you want to extend Paperclip today, the best path is often the [plugin system](doc/plugins/PLUGIN_SPEC.md). Community reference implementations are also useful feedback even when they are not merged directly into core.
+### Deliverables
 
-## Milestones
+- ✅ **Natural Language Task Routing**
+  - Parse user input and route to appropriate agents
+  - Support for common software development tasks
+  - Basic conversation flow handling
 
-### ✅ Plugin system
+- ✅ **Intent Classification Engine**
+  - Rule-based classification system
+  - Extensible intent categories (coding, design, research, etc.)
+  - Confidence scoring for classification results
 
-Paperclip should keep a thin core and rich edges. Plugins are the path for optional capabilities like knowledge bases, custom tracing, queues, doc editors, and other product-specific surfaces that do not need to live in the control plane itself.
+- ✅ **Agent Matching by Skills and Workload**
+  - Skill database per agent
+  - Workload balancing across agent pool
+  - Priority-based routing for urgent tasks
 
-### ✅ Get OpenClaw / claw-style agent employees
+- ✅ **Standalone and Embedded Chat UI**
+  - Responsive chat interface with agent cards
+  - Chrome-like embedded page
+  - Mobile-friendly design
 
-Paperclip should be able to hire and manage real claw-style agent workers, not just a narrow built-in runtime. This is part of the larger "bring your own agent" story and keeps the control plane useful across different agent ecosystems.
+- ✅ **Issue Generation and Tracking**
+  - Auto-create issues from chat requests
+  - Proper assignment with context preservation
+  - Status tracking through dashboard
 
-### ✅ companies.sh - import and export entire organizations
+- ✅ **Paperclip Integration**
+  - Heartbeat scheduling for agents
+  - Budget and cost tracking
+  - Org chart management
 
-Reusable companies matter. Import/export is the foundation for moving org structures, agent definitions, and reusable company setups between environments and eventually for broader company-template distribution.
+---
 
-### ✅ Easy AGENTS.md configurations
+## Phase 2: Intelligence
 
-Agent setup should feel repo-native and legible. Simple `AGENTS.md`-style configuration lowers the barrier to getting an agent team running and makes it easier for contributors to understand how a company is wired together.
+**Goal**: Replace rule-based systems with LLM-powered intelligence for better understanding and routing.
 
-### ✅ Skills Manager
+### Planned Work
 
-Agents need a practical way to discover, install, and use skills without every setup becoming bespoke. The skills layer is part of making Paperclip companies more reusable and easier to operate.
+- **LLM-Based Intent Classification**
+  - Replace rule-based matching with LLM classification
+  - Support for complex, multi-intent queries
+  - Context-aware understanding of user needs
 
-### ✅ Scheduled Routines
+- **Context-Aware Multi-Turn Conversations**
+  - Maintain conversation history across sessions
+  - Reference previous tasks and decisions
+  - Clarifying questions when intent is ambiguous
 
-Recurring work should be native. Routine tasks like reports, reviews, and other periodic work need first-class scheduling so the company keeps operating even when no human is manually kicking work off.
+- **Learning from Past Routing Decisions**
+  - Feedback loop on routing accuracy
+  - Agent performance tracking per intent type
+  - Automatic adjustment of matching weights
 
-### ✅ Better Budgeting
+- **Confidence Scoring and Fallback Handling**
+  - Confidence thresholds for auto-routing vs. human confirmation
+  - Graceful fallback when no agent matches
+  - Suggestion of alternative approaches
 
-Budgets are a core control-plane feature, not an afterthought. Better budgeting means clearer spend visibility, safer hard stops, and better operator control over how autonomy turns into real cost.
+- **Semantic Task Understanding**
+  - Parse technical requirements from natural language
+  - Extract implicit constraints (deadlines, tech stack)
+  - Task decomposition for complex requests
 
-### ✅ Agent Reviews and Approvals
+---
 
-Paperclip should support explicit review and approval stages as first-class workflow steps, not just ad hoc comments. That means reviewer routing, approval gates, change requests, and durable audit trails that fit the same task model as the rest of the control plane.
+## Phase 3: Integrations
 
-### ✅ Multiple Human Users
+**Goal**: Connect the AI Task Router to external platforms where teams already work.
 
-Paperclip needs a clearer path from solo operator to real human teams. That means shared board access, safer collaboration, and a better model for several humans supervising the same autonomous company.
+### Planned Work
 
-### ⚪ Cloud / Sandbox agents (e.g. Cursor / e2b agents)
+- **Slack Bot Integration**
+  - @mention the bot to create tasks
+  - Thread-based conversation tracking
+  - Channel-specific agent assignments
 
-We want agents to run in more remote and sandboxed environments while preserving the same Paperclip control-plane model. This makes the system safer, more flexible, and more useful outside a single trusted local machine.
+- **Discord Bot Integration**
+  - Server-wide task creation
+  - Role-based agent access
+  - Rich embeds for task status
 
-### ⚪ Artifacts & Work Products
+- **Microsoft Teams Support**
+  - Teams tab app
+  - Adaptive cards for task display
+  - Office 365 integration
 
-Paperclip should make outputs first-class. That means generated artifacts, previews, deployable outputs, and the handoff from "agent did work" to "here is the result" should become more visible and easier to operate.
+- **Email Triggers**
+  - Create tasks from email subjects/body
+  - Auto-respond with task tracking links
+  - Support for email attachments as context
 
-### ⚪ Memory / Knowledge
+- **Webhook API**
+  - Incoming webhooks for external systems
+  - Outgoing webhooks for status updates
+  - Custom integration endpoints
 
-We want a stronger memory and knowledge surface for companies, agents, and projects. That includes durable memory, better recall of prior decisions and context, and a clearer path for knowledge-style capabilities without turning Paperclip into a generic chat app.
+- **Mobile App Companion**
+  - iOS/Android app for task creation
+  - Push notifications for task updates
+  - Voice input for task creation
 
-### ⚪ Enforced Outcomes
+---
 
-Paperclip should get stricter about what counts as finished work. Tasks, approvals, and execution flows should resolve to clear outcomes like merged code, published artifacts, shipped docs, or explicit decisions instead of stopping at vague status updates.
+## Phase 4: Enterprise Features
 
-### ⚪ MAXIMIZER MODE
+**Goal**: Make AI Task Router suitable for team and enterprise use with governance and compliance.
 
-This is the direction for higher-autonomy execution: more aggressive delegation, deeper follow-through, and stronger operating loops with clear budgets, visibility, and governance. The point is not hidden autonomy; the point is more output per human supervisor.
+### Planned Work
 
-### ⚪ Deep Planning
+- **Role-Based Access Control (RBAC)**
+  - User roles with permission levels
+  - Company-scoped data access
+  - Agent visibility controls
 
-Some work needs more than a task description before execution starts. Deeper planning means stronger issue documents, revisionable plans, and clearer review loops for strategy-heavy work before agents begin execution.
+- **Audit Logs and Compliance**
+  - Full audit trail of all routing decisions
+  - Exportable compliance reports
+  - Data retention policies
 
-### ⚪ Work Queues
+- **Custom Agent Onboarding**
+  - Self-service agent creation wizard
+  - Skill definition templates
+  - Agent testing and validation
 
-Paperclip should support queue-style work streams for repeatable inputs like support, triage, review, and backlog intake. That would make it easier to route work continuously without turning every system into a one-off workflow.
+- **Analytics Dashboard**
+  - Routing accuracy metrics
+  - Agent performance analytics
+  - Cost and time savings reports
+  - Team productivity insights
 
-### ⚪ Self-Organization
+- **Advanced Approval Workflows**
+  - Multi-stage approvals for sensitive tasks
+  - Budget approval gates
+  - Human-in-the-loop for high-risk operations
 
-As companies grow, agents should be able to propose useful structural changes such as role adjustments, delegation changes, and new recurring routines. The goal is adaptive organizations that still stay within governance and approval boundaries.
+- **Enterprise SSO**
+  - SAML/OIDC integration
+  - Active Directory sync
+  - SCIM provisioning
 
-### ⚪ Automatic Organizational Learning
+---
 
-Paperclip should get better at turning completed work into reusable organizational knowledge. That includes capturing playbooks, recurring fixes, and decision patterns so future work starts from what the company has already learned.
+## Phase 5: Autonomy
 
-### ⚪ CEO Chat
+**Goal**: Enable the system to improve itself and operate with minimal human oversight.
 
-We want a lighter-weight way to talk to leadership agents, but those conversations should still resolve to real work objects like plans, issues, approvals, or decisions. This should improve interaction without changing the core task-and-comments model.
+### Planned Work
 
-### ⚪ Cloud deployments
+- **Self-Improving Routing Models**
+  - Continuous learning from successful routes
+  - A/B testing of routing strategies
+  - Model retraining pipelines
 
-Local-first remains important, but Paperclip also needs a cleaner shared deployment story. Teams should be able to run the same product in hosted or semi-hosted environments without changing the mental model.
+- **Predictive Issue Creation**
+  - Proactive task creation based on patterns
+  - Deadline prediction and early warnings
+  - Resource bottleneck prediction
 
-### ⚪ Desktop App
+- **Agent Performance Optimization**
+  - Automatic agent skill gap identification
+  - Training recommendations for underperforming agents
+  - Dynamic team restructuring suggestions
 
-A desktop app can make Paperclip feel more accessible and persistent for day-to-day operators. The goal is easier access, better local ergonomics, and a smoother default experience for users who want the control plane always close at hand.
+- **Automated Reporting**
+  - Weekly team productivity reports
+  - Cost analysis and optimization suggestions
+  - Trend analysis and forecasting
+
+- **Cross-Company Learning**
+  - Anonymized pattern learning across companies
+  - Best practice recommendations
+  - Industry-specific routing templates
+
+- **Autonomous Company Health**
+  - Self-monitoring for system health
+  - Automatic recovery from agent failures
+  - Capacity planning and scaling recommendations
+
+---
+
+## Contribution Guidelines
+
+We welcome community contributions! Here's how to engage:
+
+- **Phase 1 bugs and polish**: Easiest to merge
+- **Phase 2 intelligence features**: Coordinate in issues before building
+- **Phase 3+ integrations**: Open an RFC issue for discussion
+- **Docs and tests**: Always welcome
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide.
+
+---
+
+## Notes
+
+- Priorities may shift based on user feedback
+- Enterprise features (Phase 4) will be developed after core stability
+- Autonomy (Phase 5) is long-term vision, not immediate commitment
+- Each phase builds on the previous — no skipping phases
+
+---
+
+*Last updated: June 2026*
